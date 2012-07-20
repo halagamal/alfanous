@@ -28,7 +28,7 @@ it contains the linguistic analysers of Quran and Arabic...etc.
 
 #from alfanous.dynamic_resources import synonymes_dyn as sydy
 from alfanous.dynamic_resources import stopwords_dyn as swdy
-from alfanous.Support.whoosh.analysis import StopFilter, RegexTokenizer #LowercaseFilter, StandardAnalyzer,
+from whoosh.analysis import StopFilter, RegexTokenizer #LowercaseFilter, StandardAnalyzer,
 #from pyarabic.araby  import araby
 
 from alfanous.Support.ar_ctype import strip_tashkeel, strip_tatweel, normalize_spellerrors, normalize_hamza, normalize_lamalef  #, HARAKAT_pat, 
