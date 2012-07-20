@@ -27,12 +27,9 @@ setup(
 	platforms = "ALL",
 	license = "AGPL",
 	#packages=find_packages(where='..', exclude=()),
-	packages = ['alfanous', 'alfanous.dynamic_resources', 'alfanous.Support',
-            'alfanous.Support.whoosh', 'alfanous.Support.whoosh.filedb',
-            'alfanous.Support.whoosh.lang', 'alfanous.Support.whoosh.qparser',
-            'alfanous.Support.whoosh.support'],
+	packages = ['alfanous', 'alfanous.dynamic_resources', 'alfanous.Support',],
 
-	install_requires = ['pyparsing'], # 'whoosh == 0.3.18',
+	install_requires = ['pyparsing', 'whoosh'], # 'whoosh == 0.3.18',
 
 	author = "Assem Chelli",
 	author_email = "assem.ch@gmail.com",

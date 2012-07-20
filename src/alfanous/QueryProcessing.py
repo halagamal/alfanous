@@ -30,11 +30,11 @@ it contains specified query parsers , some linguistic operations
 @bug: multifields
 '''
 
-from alfanous.Support.whoosh.qparser import QueryParser #, MultifieldParser
-from alfanous.Support.whoosh.query import Term, MultiTerm
-from alfanous.Support.whoosh.query import Wildcard as whoosh_Wildcard
-from alfanous.Support.whoosh.query import Prefix as whoosh_Prefix
-from alfanous.Support.whoosh.query import Or, NullQuery, Every #, And
+from whoosh.qparser import QueryParser #, MultifieldParser
+from whoosh.query import Term, MultiTerm
+from whoosh.query import Wildcard as whoosh_Wildcard
+from whoosh.query import Prefix as whoosh_Prefix
+from whoosh.query import Or, NullQuery, Every #, And
 
 
 from alfanous.dynamic_resources.synonymes_dyn import syndict
