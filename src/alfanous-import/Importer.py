@@ -26,9 +26,9 @@
 @to do : Prefixes / Suffixes
 '''
 
-from alfanous.Support.whoosh.fields import Schema, STORED, ID, KEYWORD, TEXT, NUMERIC
-from alfanous.Support.whoosh.filedb.filestore import FileStorage
-from alfanous.Support.whoosh import index
+from whoosh.fields import Schema, STORED, ID, KEYWORD, TEXT, NUMERIC
+from whoosh.filedb.filestore import FileStorage
+from whoosh import index
 
 
 import os.path
@@ -173,7 +173,7 @@ class QuranicCorpusImporter:
 										    "aspect":IFEXIST( d, "aspect" )
 										    }
             word_gid += 1
-            print word_gid, "\n" if word_gid % 10 == 0 else "...",
+            print word_gid, ":", iteration["word_id"], "\n" if word_gid % 10 == 0 else "...",
 
             order = 0
             for d in iteration["morphology"]["prefixes"]:

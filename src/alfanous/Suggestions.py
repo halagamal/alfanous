@@ -29,7 +29,7 @@ it contains  suggestions systems
 
 
 '''
-from alfanous.Support.whoosh.spelling import SpellChecker
+from whoosh.spelling import SpellChecker
 
 class QSuggester( SpellChecker ):
     """ the basic system of suggestions """
