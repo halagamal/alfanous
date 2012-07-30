@@ -15,6 +15,7 @@ if __name__ == '__main__':
     if QWSE.OK:
         print "most frequent vocalized words"
         mfw = QWSE.most_frequent_words( 10, "word" )
+        print mfw
         for term in mfw:
             print "\t", term[1], " - frequence = ", term[0], "."
         print "most  frequent unvocalized words"

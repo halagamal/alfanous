@@ -122,7 +122,7 @@ class QSearcher:
             querystr = unicode( buck2uni( querystr, ignore = "'_\"%*?#~[]{}:>+-|" ) )
 
         query = self._qparser.parse( querystr )
-        results = self.searcher.search( query, limit, QSort( sortedby ), reverse )
+        results = self.searcher.search( query, limit = limit, sortedby = QSort( sortedby ), reverse = reverse )
         terms = set()
         try:query.all_terms( terms )
         except:pass

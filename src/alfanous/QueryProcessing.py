@@ -35,7 +35,8 @@ from whoosh.query import Term, MultiTerm
 from whoosh.query import Wildcard as whoosh_Wildcard
 from whoosh.query import Prefix as whoosh_Prefix
 from whoosh.query import Or, NullQuery, Every #, And
-
+from whoosh.query.positional import Phrase
+from whoosh.qparser.syntax import OrGroup
 
 from alfanous.dynamic_resources.synonymes_dyn import syndict
 from alfanous.dynamic_resources.arabicnames_dyn import ara2eng_names
@@ -212,7 +213,7 @@ ARABIC_PARSER_FN = _make_arabic_parser()
 
 class StandardParser( QueryParser ):#
     def __init__( self, schema, mainfield, otherfields, termclass = Term ):
-        super( StandardParser, self ).__init__( mainfield, schema = schema, conjunction = Or, termclass = termclass )
+        super( StandardParser, self ).__init__( fieldname = mainfield, schema = schema, plugins = None, termclass = termclass, phraseclass = Phrase, group = OrGroup )
 
 
 
