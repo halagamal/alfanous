@@ -106,7 +106,7 @@ class Raw():
 			      "highlight": ["css", "html", "genshi", "bold", "bbcode"],
 			      "script": ["standard", "uthmani"],
 			      "vocalized": [True, False],
-			      "recitation": [], #map(lambda x:str(x),range(30)),
+			      "recitation": xrange( 30 ),
 			      "translation": [],
 			      "prev_aya": [True, False],
 			      "next_aya": [True, False],
@@ -119,10 +119,10 @@ class Raw():
 			      "annotation_word":[True, False],
 			      "annotation_aya":[True, False],
 			      "sortedby":["total", "score", "mushaf", "tanzil", "subject"],
-			      "offset":[], #xrange(6237)
-			      "range":[], # xrange(DEFAULTS["maxrange"]) , # used as "perpage" in paging mode 
-			      "page":[], # xrange(6237),  # overridden with offset
-			      "perpage":[], # xrange( DEFAULTS["maxrange"] ) , # overridden with range
+			      "offset": xrange( 6237 ),
+			      "range": xrange( DEFAULTS["maxrange"] ) , # used as "perpage" in paging mode 
+			      "page": xrange( 6237 ), # overridden with offset
+			      "perpage": xrange( DEFAULTS["maxrange"] ) , # overridden with range
 			      "fuzzy":[True, False],
 		}
 
@@ -208,7 +208,7 @@ class Raw():
 			  "fields":self._fields,
 			  "fields_reverse":self._fields_reverse,
 			  "errors":self._errors,
-			  "domains":FREEZE_XRANGE( self._domains ),
+			  "domains": self._domains,
 			  "help_messages": self._helpmessages
 			  }
 
